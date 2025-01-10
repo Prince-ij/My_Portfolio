@@ -1,0 +1,545 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Header Styling */
+header {
+    color: #fff;
+    background:
+      linear-gradient(90deg, rgba(255, 102, 204, 0.8), rgba(102, 204, 255, 0.8), rgba(255, 102, 204, 0.8)),
+      url('headerbg.png');
+    background-size: 300% 300%, cover;
+    background-blend-mode: overlay;
+    background-position: center;
+    animation: gradientAnimation 6s infinite alternate;
+    padding-top: 3rem; /* Extra padding at the top */
+    padding-bottom: 3rem; /* Extra padding at the bottom */
+  }
+
+ 
+  /* Animation for Background Gradient */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%, center;
+    }
+    100% {
+      background-position: 100% 50%, center;
+    }
+  }
+
+  /* Navigation Bar Styling */
+  .nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    z-index: 10; /* Ensure it's above other elements */
+  }
+
+  .nav-item {
+    margin-left: 15px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+    font-weight: 500;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: #000;
+  }
+
+  .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  /* Banner Text Styling */
+  #banner .col-md-6 {
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+
+#about {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0d1f33;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#about p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    #about .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about img {
+        margin-top: 20px;
+    }
+}
+
+#skills {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+    color: #333;
+}
+
+#skills h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0d1f33;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+#skills .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-item {
+    background-color: #fff;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 270px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item h4 {
+    color: #0d1f33;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.skill-item p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#soft-skills {
+    margin-top: 30px;
+}
+
+.soft-skills-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.soft-skills-card h4 {
+    font-size: 1.8rem;
+    color: #0d1f33;
+    margin-bottom: 15px;
+}
+
+.soft-skills-card p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .skill-item {
+        width: 45%; /* 2 by 2 layout on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-item {
+        width: 80%; /* Full width on small screens */
+    }
+}
+
+#skills {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+    color: #333;
+}
+
+#skills h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexible grid with minimum size */
+    gap: 20px; /* Space between grid items */
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.grid-item p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .grid-item {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+#projects-highlight {
+    background-color: #ecf0f1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#projects-highlight h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexible grid */
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.grid-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.grid-item p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.grid-item .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.grid-item .btn:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .grid-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+#projects-highlight {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+#projects-highlight h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.carousel-inner {
+    text-align: center;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.project-card .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: #2980b9;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        text-align: left;
+    }
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+footer h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+footer p {
+    color: #bdc3c7;
+    font-size: 1rem;
+}
+
+footer .form-control {
+    border-radius: 0.25rem;
+    padding: 12px;
+    border: 1px solid #7f8c8d;
+}
+
+footer .btn-primary {
+    background-color: #3498db;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px;
+    transition: background-color 0.3s ease;
+}
+
+footer .btn-primary:hover {
+    background-color: #2980b9;
+}
+
+footer .social-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #f39c12;
+}
+
+footer .row.mt-4 p {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+@media (max-width: 768px) {
+    footer .row {
+        text-align: center;
+    }
+
+    footer .form-control, footer .btn-primary {
+        width: 100%;
+    }
+}
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.blog-list .blog-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-list .blog-card h2 {
+    font-size: 1.8rem;
+}
+
+.blog-list .blog-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.blog-list .blog-card a:hover {
+    text-decoration: underline;
+}
+
+.blog-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}

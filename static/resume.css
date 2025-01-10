@@ -1,0 +1,199 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    color: #fff;
+    background:
+      linear-gradient(90deg, rgba(255, 102, 204, 0.8), rgba(102, 204, 255, 0.8), rgba(255, 102, 204, 0.8)),
+      url('headerbg.png');
+    background-size: 300% 300%, cover;
+    text-align: center;
+    background-blend-mode: overlay;
+    background-position: center;
+    animation: gradientAnimation 6s infinite alternate;
+    padding-top: 3rem; /* Extra padding at the top */
+    padding-bottom: 3rem; /* Extra padding at the bottom */
+  }
+
+
+  /* Animation for Background Gradient */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%, center;
+    }
+    100% {
+      background-position: 100% 50%, center;
+    }
+  }
+
+  
+
+  .nav-item {
+    margin-left: 15px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+    font-weight: 500;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: #000;
+  }
+
+  .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+header h1 {
+    font-size: 3rem;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5rem;
+    margin-bottom: 0.5rem;
+    clear: both;
+}
+
+header h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+header a {
+    float: left;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    margin: 5rem auto;
+    padding: 2rem;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #007bff;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+ul li strong {
+    font-weight: bold;
+}
+
+/* Skills Section */
+.row {
+    margin-top: 2rem;
+}
+
+.col-md-4 {
+    padding: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+}
+
+ul li {
+    font-size: 1.1rem;
+}
+
+/* Project and Work Items */
+.project-item, .work-item, .education-item {
+    margin-bottom: 1.5rem;
+}
+
+.project-item h4, .work-item h4, .education-item h4 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-item a, .work-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-item a:hover, .work-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header h3 {
+        font-size: 1.25rem;
+    }
+
+    .col-md-4 {
+        margin-bottom: 2rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+}
