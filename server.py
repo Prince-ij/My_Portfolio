@@ -1,7 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash, redirect
 import requests
+import os
+import yagmail
+
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
+YAGMAIL_KEY = os.environ.get('YAGMAIL_KEY')
+
 
 @app.route('/')
 def home():
@@ -28,6 +34,25 @@ def projects():
 def resume():
     return render_template('resume.html')
 
-if __name__=='__main__':
-    app.run(host="0.0.0.0", port=5000)
+@app.route('/contact', methods=['POST', 'GET'])
+def contact_me():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        msg = request.form['msg']
 
+    referrer = request.referrer
+
+    message = f"Name: {name}\nEmail: {email}\nBODY:\n{msg}"
+    yag = yagmail.SMTP("baaby.dudu@gmail.com", YAGMAIL_KEY)
+    yag.send("princeij56@gmail.com", "From Your Blog Contact Form", message)
+
+    flash('Message successfully sent !', 'success')
+    if referrer:
+        return redirect(referrer)
+
+    return render_template('home.html')
+
+
+if __name__=='__main__':
+    app.run()

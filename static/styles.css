@@ -17,7 +17,10 @@ header {
     padding-bottom: 3rem; /* Extra padding at the bottom */
   }
 
- 
+  .alert {
+    transition: opacity 0.5s ease-in-out;
+}
+
   /* Animation for Background Gradient */
   @keyframes gradientAnimation {
     0% {
